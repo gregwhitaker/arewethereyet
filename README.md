@@ -1,5 +1,7 @@
 # Are we there yet?
 
+A simple utility for creating great looking progress bars in command line applications.
+
 ## Bugs and Feedback
 
 For bugs, questions and discussions please use the [Github Issues](https://github.com/gregwhitaker/arewethereyet/issues).
