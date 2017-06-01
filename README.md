@@ -1,6 +1,6 @@
 # Are we there yet?
 
-A simple utility for creating great looking progress bars in command line applications.
+A simple utility for creating progress bars in command line applications.
 
 ![Simpsons](/docs/images/simpsons.gif)
 
