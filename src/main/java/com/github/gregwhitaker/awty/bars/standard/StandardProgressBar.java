@@ -62,6 +62,16 @@ public final class StandardProgressBar implements ProgressBar {
     }
 
     @Override
+    public void update(int percentage) {
+        this.percentage = percentage;
+    }
+
+    @Override
+    public void update(double percentage) {
+        this.percentage = (float) percentage;
+    }
+
+    @Override
     public void render() {
         System.out.print(toString());
     }
@@ -102,4 +112,5 @@ public final class StandardProgressBar implements ProgressBar {
     private float calculateStepSize(int width) {
         return 100f / width;
     }
+    
 }

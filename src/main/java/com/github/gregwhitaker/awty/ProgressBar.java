@@ -28,9 +28,24 @@ public interface ProgressBar {
 
     /**
      * Updates the percentage setting of the progress bar.
+     *
      * @param percentage percentage to set
      */
     void update(float percentage);
+
+    /**
+     * Updates the percentage setting of the progress bar.
+     *
+     * @param percentage percentage to set
+     */
+    void update(int percentage);
+
+    /**
+     * Updates the percentage setting of the progress bar.
+     *
+     * @param percentage percentage to set
+     */
+    void update(double percentage);
 
     /**
      * Renders the progress bar to the terminal.
@@ -41,4 +56,5 @@ public interface ProgressBar {
      * @return the string representation of the progress bar
      */
     String toString();
+
 }
