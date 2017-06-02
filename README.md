@@ -4,6 +4,20 @@ A simple utility for creating progress bars in command line applications.
 
 ![Simpsons](/docs/images/simpsons.gif)
 
+## Usage
+
+        // Create the progress bar
+        ProgressBar bar = ProgressBarBuilder.standardProgressBar()
+                .width(10)
+                .showPercentage()
+                .build();
+
+        // Update progress
+        bar.update(25f);
+
+        // Render the progress bar to the terminal
+        bar.render();
+
 ## Bugs and Feedback
 
 For bugs, questions and discussions please use the [Github Issues](https://github.com/gregwhitaker/arewethereyet/issues).
