@@ -6,6 +6,6 @@ public interface ProgressBar {
 
     void update(float percentage);
 
-    String render();
+    void render();
 
 }

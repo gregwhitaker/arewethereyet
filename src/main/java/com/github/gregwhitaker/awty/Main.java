@@ -12,19 +12,21 @@ public class Main {
 
         bar.update(10.1f);
 
-        System.out.print(bar.render());
+        bar.render();
 
         Thread.sleep(1000);
 
         bar.update(33.0f);
 
-        System.out.print(bar.render());
+        bar.render();
 
         Thread.sleep(1000);
 
         bar.update(100f);
 
-        System.out.print(bar.render());
+        bar.render();
+
+        Thread.sleep(3000);
     }
 
 }

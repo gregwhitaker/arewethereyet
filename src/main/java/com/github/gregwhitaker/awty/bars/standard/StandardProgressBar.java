@@ -39,7 +39,12 @@ public class StandardProgressBar implements ProgressBar {
     }
 
     @Override
-    public String render() {
+    public void render() {
+        System.out.print(toString());
+    }
+
+    @Override
+    public String toString() {
         StringBuilder builder = new StringBuilder(width * 2);
         builder.append(endcap);
 
