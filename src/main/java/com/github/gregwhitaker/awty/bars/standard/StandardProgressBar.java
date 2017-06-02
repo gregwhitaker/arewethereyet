@@ -10,6 +10,7 @@ public class StandardProgressBar implements ProgressBar {
     private final char incompleteCharacter;
     private final char completeCharacter;
     private final boolean showPercentage;
+    private final float stepSize;
 
     // Runtime
     private float percentage = 0;
@@ -24,6 +25,7 @@ public class StandardProgressBar implements ProgressBar {
         this.incompleteCharacter = incompleteCharacter;
         this.completeCharacter = completeCharacter;
         this.showPercentage = showPercentage;
+        this.stepSize = calculateStepSize(width);
     }
 
     @Override
@@ -38,7 +40,20 @@ public class StandardProgressBar implements ProgressBar {
 
     @Override
     public String render() {
-        return "|*****------|";
+        StringBuilder builder = new StringBuilder(width * 2);
+        builder.append(endcap);
+        builder.append(endcap);
+
+        if (showPercentage) {
+            builder.append(" ");
+            builder.append(getPercentage());
+            builder.append("%");
+        }
+
+        return builder.toString();
     }
 
+    private float calculateStepSize(int width) {
+        return 100f / width;
+    }
 }

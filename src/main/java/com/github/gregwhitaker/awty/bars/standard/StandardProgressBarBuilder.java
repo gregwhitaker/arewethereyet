@@ -3,6 +3,8 @@ package com.github.gregwhitaker.awty.bars.standard;
 import com.github.gregwhitaker.awty.ProgressBar;
 
 public class StandardProgressBarBuilder {
+    private static final int MINIMUM_WIDTH = 1;
+
     private int width = 10;
     private boolean showPercentage = false;
     private String endcap = "|";
@@ -10,7 +12,12 @@ public class StandardProgressBarBuilder {
     private Character incompleteCharacter = '-';
 
     public StandardProgressBarBuilder width(int width) {
-        this.width = width;
+        if (width <= 0) {
+            this.width = MINIMUM_WIDTH;
+        } else {
+            this.width = width;
+        }
+
         return this;
     }
 
