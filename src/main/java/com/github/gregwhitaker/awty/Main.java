@@ -7,6 +7,7 @@ public class Main {
     public static void main(String... args) {
         ProgressBar bar = ProgressBarBuilder.standardProgressBar()
                 .width(10)
+                .showPercentage()
                 .build();
 
         bar.update(10.1f);
