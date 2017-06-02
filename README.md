@@ -1,4 +1,5 @@
 # Are we there yet?
+[![Build Status](https://travis-ci.org/gregwhitaker/arewethereyet.svg?branch=master)](https://travis-ci.org/gregwhitaker/arewethereyet)
 
 A simple utility for creating progress bars in command line applications.
 
