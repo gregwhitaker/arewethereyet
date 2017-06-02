@@ -61,6 +61,8 @@ public class StandardProgressBar implements ProgressBar {
             builder.append("%");
         }
 
+        builder.append("\r");
+
         return builder.toString();
     }
 

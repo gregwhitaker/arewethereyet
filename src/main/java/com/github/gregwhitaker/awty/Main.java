@@ -4,7 +4,7 @@ import com.github.gregwhitaker.awty.bars.ProgressBarBuilder;
 
 public class Main {
 
-    public static void main(String... args) {
+    public static void main(String... args) throws Exception {
         ProgressBar bar = ProgressBarBuilder.standardProgressBar()
                 .width(10)
                 .showPercentage()
@@ -12,15 +12,19 @@ public class Main {
 
         bar.update(10.1f);
 
-        System.out.println(bar.render());
+        System.out.print(bar.render());
+
+        Thread.sleep(1000);
 
         bar.update(33.0f);
 
-        System.out.println(bar.render());
+        System.out.print(bar.render());
+
+        Thread.sleep(1000);
 
         bar.update(100f);
 
-        System.out.println(bar.render());
+        System.out.print(bar.render());
     }
 
 }
