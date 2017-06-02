@@ -42,6 +42,17 @@ public class StandardProgressBar implements ProgressBar {
     public String render() {
         StringBuilder builder = new StringBuilder(width * 2);
         builder.append(endcap);
+
+        int numCompleteCharacters = (int)(getPercentage() / stepSize);
+
+        for (int i = 1; i <= width; i++) {
+            if (i <= numCompleteCharacters) {
+                builder.append(completeCharacter);
+            } else {
+                builder.append(incompleteCharacter);
+            }
+        }
+
         builder.append(endcap);
 
         if (showPercentage) {
