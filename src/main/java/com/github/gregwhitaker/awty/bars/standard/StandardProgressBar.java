@@ -69,7 +69,10 @@ public final class StandardProgressBar implements ProgressBar {
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder(width * 2);
-        builder.append(endcap);
+
+        if (endcap != null && !endcap.isEmpty()) {
+            builder.append(endcap);
+        }
 
         int numCompleteCharacters = (int)(getPercentage() / stepSize);
 
@@ -81,7 +84,9 @@ public final class StandardProgressBar implements ProgressBar {
             }
         }
 
-        builder.append(endcap);
+        if (endcap != null && !endcap.isEmpty()) {
+            builder.append(endcap);
+        }
 
         if (showPercentage) {
             builder.append(" ");

@@ -23,8 +23,9 @@ import com.github.gregwhitaker.awty.ProgressBar;
  */
 public final class StandardProgressBarBuilder {
     private static final int MINIMUM_WIDTH = 1;
+    private static final int DEFAULT_WIDTH = 20;
 
-    private int width = 10;
+    private int width = DEFAULT_WIDTH;
     private boolean showPercentage = false;
     private String endcap = "|";
     private Character completeCharacter = '*';
