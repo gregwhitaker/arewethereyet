@@ -27,6 +27,8 @@ public class Main {
         bar.render();
 
         Thread.sleep(3000);
+
+        System.out.println();
     }
 
 }
