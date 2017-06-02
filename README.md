@@ -6,17 +6,17 @@ A simple utility for creating progress bars in command line applications.
 
 ## Usage
 
-        // Create the progress bar
-        ProgressBar bar = ProgressBarBuilder.standardProgressBar()
-                .width(10)
-                .showPercentage()
-                .build();
+    // Create the progress bar
+    ProgressBar bar = ProgressBarBuilder.standardProgressBar()
+        .width(10)
+        .showPercentage()
+        .build();
 
-        // Update progress
-        bar.update(25f);
+    // Update progress
+    bar.update(25f);
 
-        // Render the progress bar to the terminal
-        bar.render();
+    // Render the progress bar to the terminal
+    bar.render();
 
 ## Bugs and Feedback
 
