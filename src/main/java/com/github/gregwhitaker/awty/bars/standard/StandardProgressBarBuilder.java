@@ -21,7 +21,7 @@ import com.github.gregwhitaker.awty.ProgressBar;
 /**
  * Builder responsible for creating {@link StandardProgressBar} instances.
  */
-public class StandardProgressBarBuilder {
+public final class StandardProgressBarBuilder {
     private static final int MINIMUM_WIDTH = 1;
 
     private int width = 10;
@@ -102,5 +102,5 @@ public class StandardProgressBarBuilder {
                 completeCharacter,
                 showPercentage);
     }
-    
+
 }

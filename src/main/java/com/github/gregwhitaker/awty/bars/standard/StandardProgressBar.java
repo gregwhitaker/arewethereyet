@@ -25,7 +25,7 @@ import com.github.gregwhitaker.awty.ProgressBar;
  *
  *  |****------| 40.0%
  */
-public class StandardProgressBar implements ProgressBar {
+public final class StandardProgressBar implements ProgressBar {
 
     //Configuration
     private final int width;
