@@ -37,4 +37,8 @@ public interface ProgressBar {
      */
     void render();
 
+    /**
+     * @return the string representation of the progress bar
+     */
+    String toString();
 }
