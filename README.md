@@ -8,13 +8,13 @@ A simple utility for creating progress bars in command line applications.
 ## Usage
 
     // Create the progress bar
-    ProgressBar bar = ProgressBarBuilder.standardProgressBar()
-        .width(10)
-        .showPercentage()
-        .build();
+    ProgressBar bar = Awty.standardProgressBar()
+            .withWidth(10)
+            .showPercentage()
+            .build();
 
     // Update progress
-    bar.update(25f);
+    bar.update(10.1f);
 
     // Render the progress bar to the terminal
     bar.render();
