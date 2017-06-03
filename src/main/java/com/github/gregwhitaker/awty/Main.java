@@ -1,12 +1,12 @@
 package com.github.gregwhitaker.awty;
 
-import com.github.gregwhitaker.awty.bars.ProgressBarBuilder;
+import com.github.gregwhitaker.awty.bars.Awty;
 
 public class Main {
 
     public static void main(String... args) throws Exception {
-        ProgressBar bar = ProgressBarBuilder.standardProgressBar()
-                .width(10)
+        ProgressBar bar = Awty.standardProgressBar()
+                .withWidth(10)
                 .showPercentage()
                 .build();
 

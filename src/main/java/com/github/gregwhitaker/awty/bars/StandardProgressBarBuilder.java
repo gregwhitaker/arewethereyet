@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.github.gregwhitaker.awty.bars.standard;
+package com.github.gregwhitaker.awty.bars;
 
 import com.github.gregwhitaker.awty.ProgressBar;
 
@@ -27,17 +27,17 @@ public final class StandardProgressBarBuilder {
 
     private int width = DEFAULT_WIDTH;
     private boolean showPercentage = false;
-    private String endcap = "|";
+    private Character endcapCharacter = '|';
     private Character completeCharacter = '*';
     private Character incompleteCharacter = '-';
 
     /**
-     * Sets the width of the progress bar in number of characters.
+     * Sets the withWidth of the progress bar in number of characters.
      *
-     * @param width number of characters to make the width of the progress bar.
+     * @param width number of characters to make the withWidth of the progress bar.
      * @return {@link StandardProgressBarBuilder}
      */
-    public StandardProgressBarBuilder width(int width) {
+    public StandardProgressBarBuilder withWidth(int width) {
         if (width <= 0) {
             this.width = MINIMUM_WIDTH;
         } else {
@@ -58,13 +58,13 @@ public final class StandardProgressBarBuilder {
     }
 
     /**
-     * Sets the string to use as the endcap of the progress bar.
+     * Sets the character to use as the endcap of the progress bar.
      *
-     * @param endcap a string to use as the endcap of the progress bar
+     * @param endcapCharacter a string to use as the endcap of the progress bar
      * @return {@link StandardProgressBarBuilder}
      */
-    public StandardProgressBarBuilder endcap(String endcap) {
-        this.endcap = endcap;
+    public StandardProgressBarBuilder withEndCapCharacter(char endcapCharacter) {
+        this.endcapCharacter = endcapCharacter;
         return this;
     }
 
@@ -74,7 +74,7 @@ public final class StandardProgressBarBuilder {
      * @param completeCharacter character to use for completed steps
      * @return {@link StandardProgressBarBuilder}
      */
-    public StandardProgressBarBuilder completeCharacter(char completeCharacter) {
+    public StandardProgressBarBuilder withCompleteCharacter(char completeCharacter) {
         this.completeCharacter = completeCharacter;
         return this;
     }
@@ -85,7 +85,7 @@ public final class StandardProgressBarBuilder {
      * @param incompleteCharacter character to use for uncompleted steps
      * @return {@link StandardProgressBarBuilder}
      */
-    public StandardProgressBarBuilder incompleteCharacter(char incompleteCharacter) {
+    public StandardProgressBarBuilder withIncompleteCharacter(char incompleteCharacter) {
         this.incompleteCharacter = incompleteCharacter;
         return this;
     }
@@ -98,7 +98,7 @@ public final class StandardProgressBarBuilder {
      */
     public ProgressBar build() {
         return new StandardProgressBar(width,
-                endcap,
+                endcapCharacter,
                 incompleteCharacter,
                 completeCharacter,
                 showPercentage);

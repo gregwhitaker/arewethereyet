@@ -16,14 +16,12 @@
 
 package com.github.gregwhitaker.awty.bars;
 
-import com.github.gregwhitaker.awty.bars.standard.StandardProgressBarBuilder;
-
 /**
  * Builder that is used to create all progress bar implementations.
  */
-public final class ProgressBarBuilder {
+public final class Awty {
 
-    private ProgressBarBuilder() {
+    private Awty() {
         // prevent direct instantiation
     }
 
